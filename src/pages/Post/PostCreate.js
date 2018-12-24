@@ -9,9 +9,17 @@ class PostCreate extends Component{
   };
 
   render() {
+    console.log(this.props);
+    const redirect = (basePath, id, data) => {
+      console.log(basePath);
+      console.log(id);
+      console.log(data);
+      return ('/posts');
+    };
+
     return (
       <Create {...this.props}>
-        <SimpleForm>
+        <SimpleForm redirect={redirect}>
           <TextInput label="Title" source="title"/>
           <LongTextInput label="Content" source="body"/>
           <ReferenceInput label="Author" source="userId" reference="users" onChange={e => this.handleChange(e)}>
