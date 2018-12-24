@@ -1,9 +1,14 @@
 {
-  "name": "test-admin",
+  "name": "react-admin-bee",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.6.2",
+    "query-string": "^6.2.0",
+    "ra-data-json-server": "^2.5.1",
+    "ra-language-chinese": "^2.0.5",
     "react": "^16.6.3",
+    "react-admin": "^2.5.1",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
