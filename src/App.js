@@ -1,30 +1,26 @@
 import React from 'react';
-// import jsonServerProvider from 'ra-data-json-server';
-import { Admin, Resource, ListGuesser } from 'react-admin';
-// import chineseMessages from 'ra-language-chinese';
+import { Admin, Resource } from 'react-admin';
 import chineseMessages from './locale/ra-language-chinese';
+import { lightTheme } from './themes';
+import PostIcon from '@material-ui/icons/Book';
+import UserIcon from '@material-ui/icons/Group';
 
+import dataProvider from './dataProvider';    // 自定义数据提供商
 import authProvider from './authProvider';
 import { Dashboard } from './pages/dashboard';
 import { UserList } from './pages/users';
 import PostList from './pages/Post/PostList';
 import PostEdit from './pages/Post/PostEdit';
 import PostCreate from './pages/Post/PostCreate';
-
 import { TodoList } from './pages/todos';
 
+// import jsonServerProvider from 'ra-data-json-server';
+// import chineseMessages from 'ra-language-chinese';
 // import { NotFound } from './pages/notfound';
 // import Menu from './menu';
 // import MyLayout from './layout';
-
-import { darkTheme, lightTheme } from './themes';
-
-import PostIcon from '@material-ui/icons/Book';
-import UserIcon from '@material-ui/icons/Group';
-
 // const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 // const dataProvider = jsonServerProvider('http://localhost:3000');
-import dataProvider from './dataProvider';    // 自定义数据提供商
 
 const messages = {
   'cn': chineseMessages

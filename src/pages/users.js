@@ -2,7 +2,7 @@ import React from 'react';
 // import { List, Datagrid, TextField, EmailField, UrlField } from 'react-admin';
 import { List, Datagrid, TextField, EmailField,
   Responsive, SimpleList, ImageField } from 'react-admin';
-import MyUrlField from './MyUrlField';
+// import MyUrlField from './MyUrlField';
 
 export const UserList = props => (
   <List {...props}>

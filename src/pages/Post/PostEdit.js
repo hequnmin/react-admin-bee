@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Edit, SimpleForm, DisabledInput, ReferenceInput, SelectInput, TextInput, LongTextInput } from 'react-admin';
+import { Edit, SimpleForm, ReferenceInput, SelectInput, TextInput, LongTextInput } from 'react-admin';
+import RichTextInput from 'ra-input-rich-text';
 
 const PostTitle = ({ record }) => {
   return <span>Post {record ? `"${record.title}"` : ''}</span>;
@@ -14,7 +15,8 @@ class PostEdit extends Component {
       <Edit title={<PostTitle/>} {...this.props}>
         <SimpleForm>
           <TextInput label="Title" source="title" />
-          <LongTextInput label="Content" source="body" />
+          <LongTextInput label="Teaser" source="teaser" />
+          <RichTextInput label="Content" source="body" />
           <ReferenceInput label="Author" source="userId" reference="users">
             <SelectInput optionText="userName" />
           </ReferenceInput>
