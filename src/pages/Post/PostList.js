@@ -31,7 +31,6 @@ class PostList extends Component {
           medium={
             <Datagrid>
               <TextField label="Title" source="title" />
-              <TextField label="Content" source="body" />
               <ReferenceField label="Author" source="userId" reference="users">
                 <TextField source="userName" />
               </ReferenceField>
