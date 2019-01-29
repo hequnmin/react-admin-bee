@@ -11,7 +11,7 @@ import {
 import { stringify } from 'query-string';
 
 // const API_URL = 'my.api.url';
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:3000/api';    //Connect to react-admin-bee-server
 
 /**
  * @param {String} type One of the constants appearing at the top if this file, e.g. 'UPDATE'
@@ -93,12 +93,12 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
  */
 const convertHTTPResponseToDataProvider = (response, type, resource, params) => {
   // const { headers, json } = response;
-  const headers = response.headers, json = response.json;
+  const json = response.json;
   switch (type) {
     case GET_LIST:
       return {
-        data: json.map(x => x),
-        total: parseInt(headers.get('x-total-count').split('/').pop(), 10),      // parseInt(headers.get('content-range').split('/').pop(), 10),
+        data: json.data,            // data: json.map(x => x),
+        total: parseInt(json.total),          // total: parseInt(headers.get('x-total-count').split('/').pop(), 10),      // parseInt(headers.get('content-range').split('/').pop(), 10),
       };
     case CREATE:
       return { data: { ...params.data, id: json.id } };

@@ -6,6 +6,7 @@
     "prop-types": "^15.6.2",
     "query-string": "^6.2.0",
     "ra-data-json-server": "^2.5.1",
+    "ra-input-rich-text": "^2.6.2",
     "ra-language-chinese": "^2.0.5",
     "react": "^16.6.3",
     "react-admin": "^2.5.1",
@@ -27,7 +28,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "ra-input-rich-text": "^2.4.2"
-  }
+  "devDependencies": {}
 }

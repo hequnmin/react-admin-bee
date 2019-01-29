@@ -1,5 +1,7 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
+// import jsonServerProvider from 'ra-data-json-server';
+
 import chineseMessages from './locale/ra-language-chinese';
 import { lightTheme } from './themes';
 import PostIcon from '@material-ui/icons/Book';
@@ -14,7 +16,7 @@ import PostEdit from './pages/Post/PostEdit';
 import PostCreate from './pages/Post/PostCreate';
 import { TodoList } from './pages/todos';
 
-// import jsonServerProvider from 'ra-data-json-server';
+
 // import chineseMessages from 'ra-language-chinese';
 // import { NotFound } from './pages/notfound';
 // import Menu from './menu';
@@ -34,12 +36,9 @@ const App = () => (
     dashboard={Dashboard}
     authProvider={authProvider}
     dataProvider={dataProvider}
-    // catchAll={NotFound}
-    // menu={Menu}
     theme={lightTheme}
-    // layout={MyLayout}
   >
-    <Resource name="users" icon={UserIcon} list={UserList} />
+    <Resource name="user" icon={UserIcon} list={UserList} />
     <Resource name="posts" icon={PostIcon} list={PostList} create={PostCreate} edit={PostEdit} />
     <Resource name="todos" list={TodoList} />
   </Admin>
