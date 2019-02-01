@@ -1,7 +1,9 @@
 import React from 'react';
 // import { List, Datagrid, TextField, EmailField, UrlField } from 'react-admin';
 import { List, Datagrid, TextField, EmailField,
-  Responsive, SimpleList, ImageField } from 'react-admin';
+  Responsive, SimpleList,
+  // ImageField,
+} from 'react-admin';
 // import MyUrlField from './MyUrlField';
 
 export const UserList = props => (
@@ -17,7 +19,7 @@ export const UserList = props => (
       }
       medium={
         <Datagrid rowClick="edit">
-          <ImageField source="avatar" src="url" />
+          {/*<ImageField source="avatar" src="url" />*/}
           <TextField source="userNo" />
           <TextField source="userName" />
           <EmailField source="email" />

@@ -100,8 +100,16 @@ const convertHTTPResponseToDataProvider = (response, type, resource, params) => 
         data: json.data,            // data: json.map(x => x),
         total: parseInt(json.total),          // total: parseInt(headers.get('x-total-count').split('/').pop(), 10),      // parseInt(headers.get('content-range').split('/').pop(), 10),
       };
+    case GET_ONE:
+      return {
+        data: json.data,
+      };
     case CREATE:
       return { data: { ...params.data, id: json.id } };
+    case UPDATE:
+      return {
+        data: json.data,
+      };
     default:
       return { data: json };
   }

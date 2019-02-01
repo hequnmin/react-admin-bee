@@ -10,11 +10,16 @@ import UserIcon from '@material-ui/icons/Group';
 import dataProvider from './dataProvider';    // 自定义数据提供商
 import authProvider from './authProvider';
 import { Dashboard } from './pages/dashboard';
-import { UserList } from './pages/users';
+
 import PostList from './pages/Post/PostList';
 import PostEdit from './pages/Post/PostEdit';
 import PostCreate from './pages/Post/PostCreate';
-import { TodoList } from './pages/todos';
+import { TodoList } from './pages/todo';
+
+// import { UserList } from './pages/user';
+import UserList from './pages/User/UserList';
+import UserCreate from './pages/User/UserCreate';
+import UserEdit from './pages/User/UserEdit';
 
 
 // import chineseMessages from 'ra-language-chinese';
@@ -38,7 +43,7 @@ const App = () => (
     dataProvider={dataProvider}
     theme={lightTheme}
   >
-    <Resource name="user" icon={UserIcon} list={UserList} />
+    <Resource name="user" icon={UserIcon} list={UserList} create={UserCreate} edit={UserEdit} />
     <Resource name="posts" icon={PostIcon} list={PostList} create={PostCreate} edit={PostEdit} />
     <Resource name="todos" list={TodoList} />
   </Admin>
